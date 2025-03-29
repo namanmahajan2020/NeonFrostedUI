@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_hub/components/navbar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -6,6 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Navbar(),
       body: Container(
         color: Colors.black,
         child: SafeArea(
@@ -284,12 +286,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
-              Expanded(
-                child: Container(
-                  color: Colors.blue,
-                  child: Row(children: []),
-                ),
-              ),
             ],
           ),
         ),
