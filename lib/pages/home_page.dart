@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_hub/components/navbar.dart';
+import 'package:project_hub/pages/search_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,21 +24,32 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Image.asset('lib/images/hamburger.png', width: 35),
-                      Container(
-                        height: 40,
-                        width: 125,
-                        padding: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 144, 254, 254),
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Start Project",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15.4,
-                              fontWeight: FontWeight.bold,
+                      GestureDetector(
+                        onTap:
+                            () => Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return const SearchPage();
+                                },
+                              ),
+                            ),
+                        child: Container(
+                          height: 40,
+                          width: 125,
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 144, 254, 254),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Start Project",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 15.4,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),

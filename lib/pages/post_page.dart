@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_hub/components/navbar.dart';
+import 'package:project_hub/pages/search_page.dart';
 
 class PostPage extends StatelessWidget {
   const PostPage({super.key});
@@ -22,7 +23,21 @@ class PostPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image.asset('lib/images/hamburger.png', width: 35),
+                      GestureDetector(
+                        onTap:
+                            () => Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return const SearchPage();
+                                },
+                              ),
+                            ),
+                        child: Image.asset(
+                          'lib/images/hamburger.png',
+                          width: 35,
+                        ),
+                      ),
                       Container(
                         height: 40,
                         width: 125,
