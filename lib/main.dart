@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_hub/pages/home_page.dart';
+import 'package:project_hub/pages/post_page.dart';
 import 'package:project_hub/pages/search_page.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SearchPage(),
+      home: PostPage(),
       theme: ThemeData.dark(),
     ); 
   }
